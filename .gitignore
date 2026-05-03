@@ -4,3 +4,18 @@ data/
 test_data/
 .pytest_cache/
 *.pyc
+
+# Video and auxiliary scripts (not part of submission)
+CW2_SUBMISSION.pdf
+demo.py
+video_script.md
+video_timing.md
+build_index.py
+generate_submission_pdf.py
+build_log.txt
+brief_text.txt
+_extract_pdf.py
+test_out.txt
+test_out2.txt
+demo_test.txt
+pdf_verify.txt
