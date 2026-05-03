@@ -54,9 +54,15 @@ class QuoteIndexer:
         """
         try:
             with open(os.path.join(self.data_dir, index_file), 'r', encoding='utf-8') as f:
-                self.index = json.load(f)
+                raw = json.load(f)
             with open(os.path.join(self.data_dir, docs_file), 'r', encoding='utf-8') as f:
                 self.documents = json.load(f)
+
+            # JSON serialises dict keys as strings; convert back to int
+            self.index = {}
+            for word, doc_dict in raw.items():
+                self.index[word] = {int(k): v for k, v in doc_dict.items()}
+
         except FileNotFoundError:
             raise FileNotFoundError("Index files not found in data directory.")
 
