@@ -19,3 +19,12 @@ test_out.txt
 test_out2.txt
 demo_test.txt
 pdf_verify.txt
+
+# Video subtitles (not part of code submission)
+subtitles/
+
+# Coursework brief PDF (instructor's material, not submission)
+XJCO3011_Coursework2_Brief__2025_2026.pdf
+
+# Auxiliary text files
+pdf_text.txt
